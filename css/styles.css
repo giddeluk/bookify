@@ -105,20 +105,21 @@
   flex-direction: column;
   justify-content: center;
   margin: 2%;
-  background-color: #f3f4f6;
+  background-color: white;
 }
 #card > #card-name {
   color: #202938;
+  background-color: hsl(249, 100%, 95%);
+  width: 100%;
   font-weight: 600;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 3px;
   padding-right: 3px;
   font-size: 130%;
+  text-align: center;
 }
-#card > hr {
-  border: 1px solid #d1d4db;
-}
+
 #card > #card-author {
   color: #5a0b4d;
   padding: 3px;
@@ -126,8 +127,13 @@
   align-self: center;
   font-size: 107%;
 }
+#card > #card-pages{
+  color: #202938;
+  align-self: center;
+  
+}
 #card > #read-status {
-  color: #6b7380;
+  color: #d80027;
   align-self: center;
   font-weight: bold;
   font-size: 80%;
@@ -136,25 +142,24 @@
   display: flex;
   justify-content: center;
 }
-#card > #actions > * {
-  width: 43%;
-  margin: 2%;
+#card > #actions > *{
+  margin-top: 3%;
 }
 #card > #actions > #delete-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #d80027;
   color: white;
   border: none;
-  border-radius: 3px;
   padding: 5px;
   font-size: 90%;
-  font-weight: bolder;
+  width: 50%;
+  border-bottom-left-radius: 5px;
 }
 #card > #actions > #delete-btn svg {
   fill: white;
-  width: 18%;
+  width: 15%;
 }
 #card > #actions > #toggle-button {
   display: flex;
@@ -163,9 +168,10 @@
   background-color: #5a0b4d;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-bottom-right-radius: 5px;
+  
   padding: 5px;
   font-size: 90%;
-  font-weight: bolder;
+  width: 50%;
 }
 
