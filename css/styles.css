@@ -1,3 +1,6 @@
+:root {
+  --main-purple: #5a0b4d;
+}
 @font-face {
   font-family: san-francisco;
   src: url(/fonts/sfprodisplayregular-webfont.woff2),
@@ -8,4 +11,24 @@
   padding: 0;
   box-sizing: border-box;
   font-family: san-francisco;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  background-color: #5a0b4d;
+  color: white;
+  padding: 5px;
+}
+.navbar > p {
+  font-size: 150%;
+  font-weight: bold;
+}
+.logo {
+  fill: white;
+  height: auto;
+  width: 8%;
+  display: inline;
 }
