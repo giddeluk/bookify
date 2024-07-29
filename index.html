@@ -21,27 +21,28 @@
             id="input-name"
             type="text"
             placeholder="How to get better at coding"
+            required
           />
         </div>
         <!-- Author -->
         <div id="input-author-div">
           <label for="input-author">Author:</label>
-          <input class="form-input" id="input-author" type="text" placeholder="John Mark" />
+          <input class="form-input" id="input-author" type="text" placeholder="John Mark" required/>
         </div>
         <!-- Pages -->
         <div id="input-pages-div">
           <label for="input-pages">Pages:</label>
-          <input class="form-input" id="input-pages" type="number" placeholder="John Mark" min="1"/>
+          <input class="form-input" id="input-pages" type="number" placeholder="100" min="1" required/>
         </div>
         <!-- Read Status -->
         <div id="input-read-status-div">
           <label for="input-read-status">Read status:</label>
-          <select class="form-input" name="input-read-status" id="input-read-status">
-            <option value="read">READ</option>
-            <option value="not-read">NOT READ</option>
+          <select class="form-input" name="input-read-status" id="input-read-status" required>
+            <option value="true">READ</option>
+            <option value="false">NOT READ</option>
           </select>
         </div>
-        <button id="input-submit">Submit Book</button>
+        <button type="submit" id="input-submit">Submit Book</button>
       </form>
     </dialog>
     <div class="navbar">
@@ -69,7 +70,7 @@
           <p>View Added Books</p>
         </div>
         <div id="output-div">
-          <div id="card">
+          <!-- <div id="card">
             <p id="card-name">How to get better at coding.</p>
             <hr />
             <p id="card-author">Author: Ukandu Giddel</p>
@@ -112,7 +113,7 @@
               <button id="delete-btn">Delete</button>
               <button id="toggle-button">Toggle read status</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
