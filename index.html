@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <dialog id="dialog">
+      <form action="">
+        <div id="dialog-header">
+          <button id="close-popup">CLOSE</button>
+          <p id="dialog-header-p">Add a New book</p>
+        </div>
+        <!-- Name -->
+        <div id="input-name-div">
+          <label for="input-name">Name:</label>
+          <input
+          class="form-input"
+            id="input-name"
+            type="text"
+            placeholder="How to get better at coding"
+          />
+        </div>
+        <!-- Author -->
+        <div id="input-author-div">
+          <label for="input-author">Author:</label>
+          <input class="form-input" id="input-author" type="text" placeholder="John Mark" />
+        </div>
+        <!-- Pages -->
+        <div id="input-pages-div">
+          <label for="input-pages">Pages:</label>
+          <input class="form-input" id="input-pages" type="number" placeholder="John Mark" min="1"/>
+        </div>
+        <!-- Read Status -->
+        <div id="input-read-status-div">
+          <label for="input-read-status">Read status:</label>
+          <select class="form-input" name="input-read-status" id="input-read-status">
+            <option value="read">READ</option>
+            <option value="not-read">NOT READ</option>
+          </select>
+        </div>
+        <button id="input-submit">Submit Book</button>
+      </form>
+    </dialog>
     <div class="navbar">
       <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
@@ -39,14 +76,7 @@
             <p id="card-pages">Pages: 563</p>
             <p id="read-status">Read status: This book has NOT BEEN read</p>
             <div id="actions">
-              <button id="delete-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
-                  />
-                </svg>
-                Delete
-              </button>
+              <button id="delete-btn">Delete</button>
               <button id="toggle-button">Toggle read status</button>
             </div>
           </div>
@@ -57,14 +87,7 @@
             <p id="card-pages">Pages: 563</p>
             <p id="read-status">Read status: This book has NOT BEEN read</p>
             <div id="actions">
-              <button id="delete-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
-                  />
-                </svg>
-                Delete
-              </button>
+              <button id="delete-btn">Delete</button>
               <button id="toggle-button">Toggle read status</button>
             </div>
           </div>
@@ -75,14 +98,7 @@
             <p id="card-pages">Pages: 563</p>
             <p id="read-status">Read status: This book has NOT BEEN read</p>
             <div id="actions">
-              <button id="delete-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
-                  />
-                </svg>
-                Delete
-              </button>
+              <button id="delete-btn">Delete</button>
               <button id="toggle-button">Toggle read status</button>
             </div>
           </div>
@@ -93,14 +109,7 @@
             <p id="card-pages">Pages: 563</p>
             <p id="read-status">Read status: This book has NOT BEEN read</p>
             <div id="actions">
-              <button id="delete-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
-                  />
-                </svg>
-                Delete
-              </button>
+              <button id="delete-btn">Delete</button>
               <button id="toggle-button">Toggle read status</button>
             </div>
           </div>

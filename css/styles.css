@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   height: 8vh;
-  background-color: #5a0b4d;
+  background-color: var(--main-purple);
   color: white;
   padding: 5px;
 }
@@ -94,7 +94,7 @@
   font-size: 135%;
   font-weight: bold;
 }
-#output-div{
+#output-div {
   display: grid;
   grid-template-columns: 98%;
 }
@@ -127,10 +127,9 @@
   align-self: center;
   font-size: 107%;
 }
-#card > #card-pages{
+#card > #card-pages {
   color: #202938;
   align-self: center;
-  
 }
 #card > #read-status {
   color: #d80027;
@@ -142,7 +141,7 @@
   display: flex;
   justify-content: center;
 }
-#card > #actions > *{
+#card > #actions > * {
   margin-top: 3%;
 }
 #card > #actions > #delete-btn {
@@ -152,14 +151,13 @@
   background-color: #d80027;
   color: white;
   border: none;
-  padding: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
   font-size: 90%;
   width: 50%;
   border-bottom-left-radius: 5px;
-}
-#card > #actions > #delete-btn svg {
-  fill: white;
-  width: 15%;
 }
 #card > #actions > #toggle-button {
   display: flex;
@@ -169,9 +167,95 @@
   color: white;
   border: none;
   border-bottom-right-radius: 5px;
-  
-  padding: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
   font-size: 90%;
   width: 50%;
 }
-
+/* Hover Effects */
+.addSection button:nth-child(3):hover {
+  background-color: hsl(310, 78%, 25%);
+}
+#card > #actions > #delete-btn:hover {
+  background-color: hsl(349, 100%, 47%);
+}
+#card > #actions > #toggle-button:hover {
+  background-color: hsl(310, 78%, 15%);
+}
+/* Dialog */
+#dialog {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  width: 90%;
+  position: relative;
+  top: 20%;
+  bottom: 20%;
+  left: 5%;
+  right: 5%;
+  border-radius: 5px;
+  background-color: #f3f4f6;
+  border: 1px solid #f3f4f6;
+}
+#dialog > #dialog-header {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+#dialog-header > p {
+  color: #202938;
+  font-size: 130%;
+  font-weight: bold;
+}
+#dialog > #input-name-div,
+#input-author-div,
+#input-pages-div,
+#input-read-status-div {
+  display: flex;
+  flex-direction: column;
+}
+#dialog > input,
+label,
+select,
+.form-input,
+#dialog-header-p,
+#input-submit,
+#close-popup{
+  width: 90%;
+  margin-left: 5%;
+}
+#dialog label {
+  color: #202938;
+  font-weight: bold;
+  font-size: 85%;
+}
+#dialog input {
+  padding: 3px;
+  border: 1px solid hsl(222, 12%, 69%);
+  border-radius: 4px;
+  outline: none;
+}
+#dialog input:focus, #input-read-status:focus {
+  border: 1px solid #5a0b4d;
+}
+#dialog button:nth-child(1){
+  background-color: #f3f4f6;
+  border: none;
+  padding: 5px;
+  color: #5a0b4d;
+}
+#input-submit{
+  background-color: #5a0b4d;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin-top: 5%;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#input-read-status{
+  outline: none;
+  border-radius: 3px;
+}
