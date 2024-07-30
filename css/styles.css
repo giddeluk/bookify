@@ -18,7 +18,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: 8svh;
   background-color: var(--main-purple);
   color: white;
   padding: 5px;
@@ -30,7 +30,7 @@
 .logo {
   fill: white;
   height: auto;
-  width: 8%;
+  width: min(8%, 30px);
 }
 /* Main content */
 .main-body > * {
@@ -39,7 +39,7 @@
 .main-body {
   background-color: #ffffff;
   width: 100%;
-  height: 92vh;
+  height: 88svh;
   overflow: auto;
 }
 /* Add section */
@@ -67,7 +67,7 @@
 .addSection button:nth-child(3) {
   color: white;
   background-color: var(--main-purple);
-  width: 60%;
+  width: min(60%, 300px);
   height: 5vh;
   margin-top: 2vh;
   padding: 1px;
@@ -80,7 +80,7 @@
 }
 .addSection button:nth-child(3) svg {
   fill: white;
-  width: 8%;
+  width: min(8%, 30px);
   height: auto;
 }
 /* Display section */
@@ -96,7 +96,6 @@
 }
 #output-div {
   display: grid;
-  grid-template-columns: 98%;
 }
 #output-div > #card {
   border: 1px solid #d1d4db;
@@ -174,6 +173,15 @@
   font-size: 90%;
   width: 50%;
 }
+#footer {
+  width: 100%;
+  background-color: #5a0b4d;
+  height: 4svh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Hover Effects */
 .addSection button:nth-child(3):hover {
   background-color: hsl(310, 78%, 25%);
@@ -199,7 +207,6 @@
   border-radius: 5px;
   background-color: #f3f4f6;
   border: 1px solid hsl(218, 27%, 70%);
-  
 }
 #dialog > #dialog-header {
   display: grid;
@@ -260,4 +267,99 @@ select,
 #input-read-status {
   outline: none;
   border-radius: 3px;
+}
+/* Responsiveness */
+/* Smartphones */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #output-div {
+    grid-template-columns: 98%;
+  }
+}
+/* Small tablets and iPads */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #dialog {
+    width: 70%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 15%;
+    right: 15%;
+  }
+}
+/* Large tablets and iPads */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+  #dialog {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+  }
+}
+/* Laptop and Desktop */
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+  #dialog {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+  }
+}
+@media only screen and (min-width: 1101px) and (max-width: 1200px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  #dialog {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  #dialog {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+  }
+}
+/* Larger displays */
+@media only screen and (min-width: 1201px) {
+  #output-div {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+  }
+  #dialog {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+  }
 }

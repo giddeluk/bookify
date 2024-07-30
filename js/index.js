@@ -39,8 +39,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 // Books Array
 const myLibrary = [
-  new Book("Damn!", "Eye test", 23, "false"),
-  new Book("You knew it!", "Blondie Wavy", 34, "true"),
+  new Book("Javascript for Beginners", "Jonas Zipperman", 230, "true"),
+  new Book("React for dummies", "Blondie Wavy", 197, "false"),
+  new Book("Introductory guide to SQL", "Patrick Lewy", 59, "true"),
+  new Book("How do databases work?", "Stefanovic Law", 83, "false"),
+  new Book("Node.js A-Z", "Dan Piecek", 120, "false"),
 ];
 
 // Book Object constructor
@@ -106,20 +109,20 @@ function displayBooks() {
       if (obj.readStatus == "true") {
         obj.setReadStatus("false");
         displayBooks();
-        console.log(obj.readStatus);
       } else if (obj.readStatus == "false") {
         obj.setReadStatus("true");
-        console.log(obj.readStatus);
         displayBooks();
       }
     });
 
     createdName.textContent = item.name;
-    createdAuthor.textContent = item.author;
+    createdAuthor.textContent = `Author: ${item.author}`;
+    createdPages.textContent = `Pages: ${item.pages}`;
 
     switch (obj.readStatus) {
       case "true":
         createdReadStatus.textContent = "This book has BEEN read";
+        createdReadStatus.style.color = "Green";
         break;
       case "false":
         createdReadStatus.textContent = "This book has NOT BEEN read";
